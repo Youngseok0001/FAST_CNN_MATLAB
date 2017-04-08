@@ -7,7 +7,6 @@ addpath ../SVHN_dataset/;
 addpath ../Mnist_dataset/;
 addpath ../Backward_Phase/;
 addpath ../Forward_Phase/;
-addpath ../Gradient_Check/;
 addpath ../InitParams/;
 addpath ../Relu_Sigmoid/;
 addpath ../WinogradConv/;
@@ -26,7 +25,7 @@ global Pooling;
 
 % Initialize network
 
-Data_type = 'CIFAR10'; % OR [MNIST, SVHN]
+Data_type = 'MNIST'; % OR [CIFAR10, SVHN]
 Convolution_type = 'WINOGRAD'; % OR WINOGRAD
 Activation_function = 'RELU';% OR SIGMOID
 Optimization_method = 'ADAGRAD'; % OR SGD
@@ -60,7 +59,7 @@ imageDim = size(images,1);
 input_size = size(images);
 numClasses = 10;
 
-[conv,full] = Cnn_spec_Cfar10_1();
+[conv,full] = Cnn_spec_Mnist_1();
 
 
 % Initialise parameters for convlayers
